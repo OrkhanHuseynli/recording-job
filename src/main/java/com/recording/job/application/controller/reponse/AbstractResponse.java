@@ -9,7 +9,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AbstractResponse {
+public abstract class AbstractResponse {
     String status;
     String message;
 }
