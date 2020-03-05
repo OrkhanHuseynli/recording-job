@@ -1,4 +1,4 @@
-package com.recording.job.application.test;
+package com.recording.job.application;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.recording.job.application.controller.reponse.DataResponse;

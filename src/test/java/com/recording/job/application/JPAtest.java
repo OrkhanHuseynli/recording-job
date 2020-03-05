@@ -1,4 +1,4 @@
-package com.recording.job.application.test;
+package com.recording.job.application;
 
 
 import com.recording.job.application.RecordingApp;
