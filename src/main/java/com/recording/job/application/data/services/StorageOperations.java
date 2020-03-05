@@ -6,25 +6,27 @@ import com.recording.job.application.data.domain.Record;
 import com.recording.job.application.data.domain.RecordInfoUpdateOnly;
 import com.recording.job.application.data.domain.RecordStatus;
 import javassist.NotFoundException;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.nio.file.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Slf4j
 @Component
+@AllArgsConstructor
 public class StorageOperations <T extends Object>{
 
-    @Autowired
-    private ObjectMapper objectMapper;
+
+    private final ObjectMapper objectMapper;
 
     public void create(T object, String FILE_NAME) throws IOException {
         write(convertObjToJsonString(object), FILE_NAME);
